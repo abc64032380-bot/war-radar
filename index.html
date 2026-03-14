@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>战争情报雷达仪表盘</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <h1>战争情报雷达仪表盘</h1>
+      <p class="subtitle">GitHub Pages 可部署版 · 手机 / iPad / 桌面自适应</p>
+    </div>
+    <div class="pill" id="lastUpdated">加载中…</div>
+  </header>
+
+  <main class="container">
+    <section class="hero-grid">
+      <article class="card score-card">
+        <div class="card-title">战争风险指数</div>
+        <div class="score-wrap">
+          <div class="score" id="riskScore">--</div>
+          <div class="score-meta" id="riskLevel">--</div>
+        </div>
+        <div class="meter"><span id="riskMeter"></span></div>
+        <p class="note" id="riskSummary">--</p>
+      </article>
+
+      <article class="card mini-card">
+        <div class="card-title">布伦特原油</div>
+        <div class="metric" id="brentPrice">--</div>
+        <div class="metric-change" id="brentChange">--</div>
+      </article>
+
+      <article class="card mini-card">
+        <div class="card-title">现货黄金</div>
+        <div class="metric" id="goldPrice">--</div>
+        <div class="metric-change" id="goldChange">--</div>
+      </article>
+
+      <article class="card mini-card">
+        <div class="card-title">黑天鹅概率</div>
+        <div class="metric" id="blackSwan">--</div>
+        <div class="metric-change" id="marketDefense">--</div>
+      </article>
+    </section>
+
+    <section class="grid two-col">
+      <article class="card">
+        <div class="section-title">30天情景推演</div>
+        <div id="scenarios" class="stack"></div>
+      </article>
+
+      <article class="card">
+        <div class="section-title">48小时预警清单</div>
+        <ul id="alerts" class="alert-list"></ul>
+      </article>
+    </section>
+
+    <section class="grid two-col">
+      <article class="card">
+        <div class="section-title">市场映射</div>
+        <div id="marketMap" class="stack"></div>
+      </article>
+
+      <article class="card">
+        <div class="section-title">关键观察</div>
+        <ul id="observations" class="bullet-list"></ul>
+      </article>
+    </section>
+
+    <section class="card">
+      <div class="section-title">数据源与说明</div>
+      <div id="sources" class="sources"></div>
+      <p class="disclaimer">
+        本页面是情报仪表盘模板，不构成投资建议。你可以直接编辑 <code>data/latest.json</code> 更新指标，提交到 GitHub 后网页会自动刷新。
+      </p>
+    </section>
+  </main>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
